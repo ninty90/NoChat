@@ -404,7 +404,7 @@ private final class TextBubbleLayoutModel {
         if textSize.height > 25 { // recalculate
             maxTextWidth = layoutContext.preferredMaxLayoutWidth - textHorizontalInset
             textSize = textSizeThatFitsWidth(maxTextWidth)
-            bubbleSize = textSize.ntg_outsetBy(dx: textHorizontalInset, dy: textVerticalInset)
+            bubbleSize = textSize.ntg_outsetBy(dx: textHorizontalInset + additonWidth + 8, dy: textVerticalInset)
         } else {
             bubbleSize = CGSize(width: textHorizontalInset + textSize.width + 8 + additonWidth, height: textSize.height + textVerticalInset)
         }
